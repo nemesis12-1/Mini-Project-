@@ -1,0 +1,47 @@
+body{
+
+    background-image: url("/image/img1.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+
+}
+
+.img1{
+    height: 100px;
+    width: auto;
+    top: 200px;
+    left: 200px;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.img2{
+    height: 100px;
+    width: auto;
+    position: relative;
+    top: 270px;
+    left: 160px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+}
+.img3{
+    height: 100px;
+    width: auto;
+    position: relative;
+    top:340px;
+    left: 120px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+}
+.img4{
+    height: 100px;
+    width: auto;
+    position: relative;
+    top: 410px;
+    left: 80px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+}
