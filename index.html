@@ -1,31 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <script src="https://kit.fontawesome.com/0e2e3e8c69.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
   <title>title</title>
-  <script src="https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js"></script>
+
 </head>
+
 <body>
-  <img  class="img1" src="/image/img6.jpg">
-  <img class="img2" src="/image/img3.jpg">
-  <img class="img3" src="/image/img4.jpg">
-  <img class="img4" src="/image/img5.jpg">
+  <header>
+    <div class="container ">
+      <nav class="flex item-center justify-between">
+        <div class="left-nav ">
+          <div class="logo">
+            <img src="/image/" style=" height: 100px; width: auto; cursor: pointer;">
+          </div>
+        </div>
+
+        <div class="right-nav">
+
+          <a href="#">HOME</a>
+          <a href="#" target="_blank">CONTENT</a>
+          <a href="#" target="_blank">CONTACT</a>
+          <a href="#" target="_blank">sign-in</a>
+
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section>
+    <div class="main flex container justify-between">
+      <div class="left-main">
+        <h2>this is an empty space </h2>
+
+      </div>
+
+      <div class="right-main">
+        <form name="myform" method="post" action="abc.jsp" onsubmit="return validateform()">
+          <h3> Welcome </h3>
+
+          Email <br> <input type="text" name="email"><br />
+          Password <br> <input type="password" name="password"><br />
+
+          <a href="#">
+            <h6> Did you forget your password?</h6>
+          </a>
+          <input type="submit" value=" Log In "> <br>
+
+          <h5>------------------OR----------------</h5>
+
+          <p> Join us with your favorite <br> media account :</p>
+
+          <div class="icon ">
+            <a href="#" class="icon1"><i class="fab fa-instagram-square"></i></a>
+            <a href="#" class="icon2"><i class="fab fa-facebook-square"></i></a>
+            <a href="#" class="icon3"><i class="fab fa-twitter-square"></i></a>
+            <a href="#" class="icon4"><i class="fab fa-linkedin"></i></a>
+        </div>
+        </form>
+      </div>
+    </div>
+
+  </section>
 
 
-  
- 
-  <lord-icon
-      src="https://cdn.lordicon.com/nocovwne.json"
-      trigger="hover"
-      colors="primary:#121331,secondary:#08a88a"
-      style="width:250px;height:250p ;  ">
-      
-  </lord-icon>
 
-  
+  <script>
+    function validateform() {
+      var name = document.myform.name.value;
+      var password = document.myform.password.value;
+
+      if (name == null || name == "") {
+        alert("Email can't be blank");
+        return false;
+      } else if (password.length < 6) {
+        alert("Password must be at least 6 characters long.");
+        return false;
+      }
+    }
+  </script>
+
+
 </body>
-</html>
 
+</html>
