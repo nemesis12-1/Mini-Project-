@@ -3,34 +3,75 @@
 padding: 0%;
 margin: 0%;
 font-family: 'Source Code Pro', monospace;
-
 }
+
 body{
 
     background-image: url("/image/img1.jpg");
-    /* background-repeat: no-repeat;
+    background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
-    position: absolute; */
-
+    position: relative; 
 }
 
 .container {
     max-width: 1400px;
-     padding: 0 15px;
-     margin: 0 auto;
-     
+    padding: 0 15px;
+    margin: 20px auto;   
 }
+
+.right-nav a {
+text-decoration: none;
+color: black;
+font-size: 20px;
+text-transform: uppercase;
+padding: 10px;
+text-shadow:  0px 11px 10px rgba(0, 0, 0, 0.8);
+font-weight: bolder;
+}
+.main-headline{
+ color: #000000;
+ top: 40%;
+ position: relative;
+ /* left: 10%; */
+font-weight: 900%;
+font-size: 2rem;
+}
+.main-subline   {
+/* text-align: center; */
+align-items: center;
+color: rgb(0, 0, 0);
+position: relative;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+.main-subline span {
+  left: 20%;
+  position: relative;
+
+
+}
+.right-nav a:hover{
+
+  color: #000000;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-image: transparent;
+  border-radius: 10px;
+  
+  
+
+}
+
 .right-main form {
 
     background-color: white;
     border-radius: 10px ;
     padding: 20px;
-     margin-top: 190px;
-     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
-
+    margin-top: 60px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
 }
 .right-main h3{
     padding-bottom: 25px;
@@ -46,9 +87,9 @@ input[type=text], input[type=password] {
     border: 2px solid black;
     border-radius: 5px;
     /* box-sizing: border-box; */
-    }
+} 
 
-input[type=submit]{
+ input[type=submit]{
 
     background-color: black;
     color: rgb(255, 255, 255);
@@ -60,19 +101,32 @@ input[type=submit]{
     width: 238px;
 
 }
-.right-main form a h6{
+ .forget-password  h6{
 
-        
-        padding-bottom: 10px;
-        color: black;
+ padding-bottom: 10px;
+ color: black;
         
  }
+.sign-up-main h6{
+   font-size: 16.3px;
+ }
+.sign-up {
+
+text-decoration: underline;
+font-size: 13px;
+
+padding-left: 8px;
+font-weight: bolder;
+
+
+ }
+
  .right-main form  h5{
 
-    color: rgba(41, 38, 38, 0.911);
-    opacity: 0.5;
-    font-size: 10.5px;
-    padding: 10px 10px ;
+  color: rgba(41, 38, 38, 0.911);
+  opacity: 0.5;
+  font-size: 10.5px;
+   padding: 10px 10px ;
  }
 
  .right-main form p{
@@ -80,6 +134,7 @@ input[type=submit]{
     font-size: 14px;
     font-weight: bold;
     padding-bottom: 15px;
+    padding-top: 20px;
  }
  .icon{
     font-size: 40px;
@@ -106,7 +161,78 @@ input[type=submit]{
   .icon4{
     color:rgb(69, 161, 189) ;
     margin-right: 7px;
+  }  
+
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
   }
+  
+  /* Modal Content */
+  .modal-content {
+    border-radius: 20px;
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 330px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+  }
+  
+  /* Add Animation */
+  @-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+  }
+  
+  @keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+  }
+  
+  /* The Close Button */
+  .close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: rgb(255, 0, 0);
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* .modal-header {
+    padding: 2px 16px;
+    background-color: #000000;
+    color: white;
+  } */
+  
+  .modal-body {padding: 2px 16px;}
+  
+  /* .modal-footer {
+    padding: 2px 16px;
+    background-color: #000000;
+    color: white;
+  } */
 
 
 
@@ -151,9 +277,7 @@ input[type=submit]{
 
 
 
-
-
-.img1{
+/* .img1{
     height: 100px;
     width: auto;
     top: 200px;
@@ -188,4 +312,4 @@ input[type=submit]{
     left: 80px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 10px;
-}
+} */

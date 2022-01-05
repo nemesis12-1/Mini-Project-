@@ -20,43 +20,57 @@
       <nav class="flex item-center justify-between">
         <div class="left-nav ">
           <div class="logo">
-            <img src="/image/" style=" height: 100px; width: auto; cursor: pointer;">
+            <img src="/image/LOGO.png" style=" height: 40px; width: auto; cursor: pointer; border-radius: 50%; ">
           </div>
         </div>
 
         <div class="right-nav">
 
-          <a href="#">HOME</a>
+          <a href="/home">HOME</a>
           <a href="#" target="_blank">CONTENT</a>
           <a href="#" target="_blank">CONTACT</a>
-          <a href="#" target="_blank">sign-in</a>
+          <a href="#" target="_blank">CONTACT</a>
+
+
+
 
         </div>
       </nav>
     </div>
   </header>
 
-  <section>
-    <div class="main flex container justify-between">
+  <section class="container">
+    <div class="main flex justify-between">
       <div class="left-main">
-        <h2>this is an empty space </h2>
-
+        <div class="main-headline">
+          <h2>YOUR NECESSITIES ARE NOW A CLICK AWAY </h2>
+        </div>
+        <div class="main-subline">
+          <h3> We provide you the simplest way to fullfil your requirements <br><span>within the soceity .</span> </h3>
+        </div>
       </div>
 
       <div class="right-main">
-        <form name="myform" method="post" action="abc.jsp" onsubmit="return validateform()">
+        <form name="myform" method="post" action="#" onsubmit="return validateform()">
           <h3> Welcome </h3>
 
-          Email <br> <input type="text" name="email"><br />
-          Password <br> <input type="password" name="password"><br />
+          <label>Email </label> <br> <input type="text" name="email"><br />
+          <label> Password</label> <br> <input type="password" name="password"><br />
 
-          <a href="#">
+          <a class="forget-password" href="#">
             <h6> Did you forget your password?</h6>
           </a>
           <input type="submit" value=" Log In "> <br>
 
           <h5>------------------OR----------------</h5>
 
+          <div class="sign-up-main flex ">
+            <div>
+              <h6>Not a Member? </h6>
+            </div>
+            <div><a class="sign-up" id="myBtn" href="#">Sign-Up</a></div>
+
+          </div>
           <p> Join us with your favorite <br> media account :</p>
 
           <div class="icon ">
@@ -64,21 +78,56 @@
             <a href="#" class="icon2"><i class="fab fa-facebook-square"></i></a>
             <a href="#" class="icon3"><i class="fab fa-twitter-square"></i></a>
             <a href="#" class="icon4"><i class="fab fa-linkedin"></i></a>
-        </div>
+          </div>
         </form>
       </div>
     </div>
 
+<footer>
+
+  
+</footer>
+
+
+
+
+
+
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close">&times;</span>
+          <h2>Member Sign-Up Form </h2>
+        </div>
+        <div class="modal-body">
+
+          <form class="sign-up-form">
+            <label>Name </label> <br> <input type="text" name="Name"><br />
+            <label>Contact No. </label> <br> <input type="text" name="contact"><br />
+
+
+            <label>Email </label> <br> <input type="text" name="email"><br />
+            <label> Password</label> <br> <input type="password" name="password"><br />
+
+            <input type="submit" value=" Sign-Up ">
+          </form>
+        </div>
+        <div class="modal-footer">
+          <h3></h3>
+        </div>
+      </div>
+    </div>
   </section>
 
 
 
   <script>
     function validateform() {
-      var name = document.myform.name.value;
+      var email = document.myform.email.value;
       var password = document.myform.password.value;
 
-      if (name == null || name == "") {
+      if (email == null || email == "") {
         alert("Email can't be blank");
         return false;
       } else if (password.length < 6) {
@@ -86,6 +135,36 @@
         return false;
       }
     }
+    // ///////////////////////////////////modal/////////////
+    var modal = document.getElementById("myModal");
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal 
+    btn.onclick = function () {
+      modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+      modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+
+
+
+
+
   </script>
 
 
