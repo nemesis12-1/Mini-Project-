@@ -7,12 +7,14 @@ font-family: 'Source Code Pro', monospace;
 
 body{
 
-    background-image: url("/image/img1.jpg");
+    /* background-image: url("/image/bg1.jpg"); */
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-    background-size: cover;
+    background-size: 110% 110%;
     position: relative; 
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/image/bg2.jpg");
+    
 }
 
 .container {
@@ -31,28 +33,46 @@ text-shadow:  0px 11px 10px rgba(0, 0, 0, 0.8);
 font-weight: bolder;
 }
 .main-headline{
- color: #000000;
- top: 40%;
+ color: #ffffff;
+
  position: relative;
- /* left: 10%; */
+ 
 font-weight: 900%;
-font-size: 2rem;
+font-size: 1.6rem;
 }
 .main-subline   {
 /* text-align: center; */
 align-items: center;
-color: rgb(0, 0, 0);
+color: rgb(255, 255, 255);
 position: relative;
 top: 50%;
-left: 50%;
+left: 51%;
 transform: translate(-50%, -50%);
 }
 .main-subline span {
   left: 20%;
-  position: relative;
+  position: absolute;
+  max-width: 100%;
 
 
 }
+.get-started-button {
+  position: relative;
+  top: 63%;
+  
+  
+}
+.get-started-button  a {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: rgb(0, 0, 0);
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+ }
+
+
+
 .right-nav a:hover{
 
   color: #000000;
@@ -80,7 +100,7 @@ transform: translate(-50%, -50%);
 }
 
 input[type=text], input[type=password] {
-    width: 210px;
+    width: 274px;
     padding: 8px 10px;
     margin: 8px 0;
     background-color: rgba(190, 176, 138, 0.144);
@@ -98,7 +118,7 @@ input[type=text], input[type=password] {
     border: 2px solid white;
     border-radius: 8px;
     cursor: pointer;
-    width: 238px;
+    width: 298px;
 
 }
  .forget-password  h6{
@@ -115,7 +135,7 @@ input[type=text], input[type=password] {
 text-decoration: underline;
 font-size: 13px;
 
-padding-left: 8px;
+padding-left: 6em;
 font-weight: bolder;
 
 
@@ -235,7 +255,40 @@ font-weight: bolder;
   } */
 
 
+  .anim-typewriter {
+    animation: typewriter 4s steps(40) 1s 1 normal both,
+    blinkTextCursor 500ms steps(40) infinite normal;
+}
 
+@keyframes typewriter {
+    from {
+          width: 0;
+    }
+    to {
+          width: 34em;
+    }
+}
+
+@keyframes blinkTextCursor {
+    from {
+          border-right-color: rgba(255, 255, 255, 0.75);
+    }
+    to {
+          border-right-color: transparent;
+    }
+}
+.line {
+  position: relative;
+  top: 35%;
+  width: 16em;
+  margin: 0 auto;
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
+  font-size: 180%;
+  text-align: center;
+  white-space: nowrap;
+ left: -4%;
+  overflow: hidden;transform: translateY(-50%);
+}
 
 
 
